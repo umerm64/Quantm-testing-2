@@ -98,4 +98,4 @@ jobs:
           --platform managed \
           --allow-unauthenticated \
           --project ${{ secrets.GCP_PROJECT_ID }}
-          --port=5000
+          --port=8080
