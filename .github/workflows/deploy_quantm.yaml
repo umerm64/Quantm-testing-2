@@ -67,9 +67,9 @@ jobs:
 
       - name: Build & Push docker image for API
         run: |
-          docker build -t qtest/first:latest .
-          docker tag qtest/first:latest ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:latest
-          docker tag qtest/first:latest ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:${{ steps.vars.outputs.short_sha }}
+          docker build -t qtest/second:latest .
+          docker tag qtest/second:latest ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:latest
+          docker tag qtest/second:latest ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:${{ steps.vars.outputs.short_sha }}
           docker push ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:latest
           docker push ${{ secrets.GCP_ARTIFACT_REPOSITORY }}/qsecond:${{ steps.vars.outputs.short_sha }}
 
