@@ -7,5 +7,5 @@ hello
 world
 
 umerm64-patch-2
-test
+test.
 umerm64-patch-11
